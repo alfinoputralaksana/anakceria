@@ -15,30 +15,14 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="profile.html">Profile</a></li>
                     <li class="dropdown">
-                        <a href="#programs">Program</a>
+                        <a>Program</a>
                         <ul class="dropdown-menu">
                             <li><a href="programbelajar.html">Program Belajar</a></li>
                             <li><a href="program_asuh.html">Program Orang Tua Asuh</a></li>
-                            <li><a href="yacipreuner.html">YACI-preneur</a></li>
                         </ul>
                     </li>
-                    <li class="dropdown">
-                        <a href="#donations">Donasi</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="donasi_quran.html">Donasi Rumah Qur'an</a></li>
-                            <li><a href="donasi_sembako.html">Donasi Sembako Yatim, Duafa, Dan bantuan Sosial</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#contact">Tahfidz</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#wakaf-tanah">Rumah Qur'an</a></li>
-                            <li><a href="#wakaf-sumur">Pengabdian Sekolah</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#activities">Kegiatan</a></li>
-                    <li><a href="#articles">Artikel</a></li>
-                    <li><a href="register.html" class="tbl-daftar">Register</a></li>
+                    <li><a href="donasi.html" class="active">Donasi</a></li>
+                    <li><a href="kegiatan.html">Kegiatan</a></li>
                     <li><a href="login.html" class="tbl-biru">Login</a></li>
                 </ul>
             </div>
@@ -50,25 +34,46 @@
         <section id="home" class="fade-in">
             <img src="assets/img/donasi.png" class="bg1 img-animate" alt="Background Image"/>
             <div class="kolom img-animate">
-                <h2>Donasi Rumah Qur'an Gratis</h2>
-                <p>Yayasan Anak Ceria Indonesia bekerja sama dengan Tahfidz Qur’an An-Nur Cirebon mengucapkan banyak terima kasih kepada para Donatur yang baik hatinya karena telah membantu mewujudkan berdirinya Rumah Qur’an An-nur.</p>
+                <h2>Donasi Sembako Yatim, Dhuafa, Dan Bantuan Sosial</h2>
+                <p>Yayasan Anak Ceria Indonesia juga mengadakan Pengajian mingguan sekaligus pembagian sembako untuk Yatim dan Dhuafa, serta melakukan kegiatan sosial di masyarakat.
+                    Oleh karena itu, kami membutuhkan bantuan Bapak dan Ibu donatur baik berupa uang maupun berupa barang/bahan makanan, donatur dapat menghubungi kami langsung di 0818 0600 2906 (Deasy)</p>
                 <p><a href="#donationModal" class="tbl-pink" onclick="openModalSembako()">Donasi Sekarang</a></p>
             </div>
         </section>
 
        <!-- Modal Donasi -->
-       <div id="donationModal" class="modal-sembako">
+    <div id="donationModal" class="modal-sembako">
         <div class="modal-content-sembako">
             <span class="close-sembako" onclick="closeModalSembako()">&times;</span>
             <h2>Form Donasi</h2>
             <form action="submit_donation.php" method="post" enctype="multipart/form-data">
                 <div class="form-group">
-                    <label for="name">Nama:</label>
-                    <input type="text" id="name" name="name" required>
+                    <label for="name">Nama Lengkap</label>
+                    <input type="text" id="name" name="name" placeholder="Masukan Nama Lengkap Anda" required>
+                </div>
+                <div class="form-group">
+                    <label for="name">No. Whatsapp</label>
+                    <input type="text" id="name" name="name" placeholder="Masukan Nomor (contoh: 0895704268728)" required>
+                </div>
+                <div class="form-group">
+                    <label for="name">Email</label>
+                    <input type="text" id="email" name="email" placeholder="Masukan Email" required>
+                </div>
+                <div class="form-group">
+                    <label for="address">Alamat:</label>
+                    <textarea id="address" placeholder="Masukan Alamat Lengkap Anda" name="address" rows="4" required></textarea>
                 </div>
                 <div class="form-group">
                     <label for="bank">Nama Bank:</label>
-                    <input type="text" id="bank" name="bank" required>
+                    <input type="text" placeholder="Masukan Nama Bank (contoh: BCA)" id="bank" name="bank" required>
+                </div>
+                <div class="form-group">
+                    <label for="nominal">Nominal Donasi:</label>
+                    <div class="donation-control">
+                        <button type="button" class="btn-decrement" onclick="updateDonation(-1)">-</button>
+                        <input type="text" id="nominal" name="nominal" value="500000" readonly>
+                        <button type="button" class="btn-increment" onclick="updateDonation(1)">+</button>
+                    </div>
                 </div>
                 <div class="form-group">
                     <label for="transferProof">Upload Bukti Transfer:</label>

@@ -15,30 +15,14 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="profile.html">Profile</a></li>
                     <li class="dropdown">
-                        <a href="#programs">Program</a>
+                        <a>Program</a>
                         <ul class="dropdown-menu">
                             <li><a href="programbelajar.html">Program Belajar</a></li>
                             <li><a href="program_asuh.html">Program Orang Tua Asuh</a></li>
-                            <li><a href="yacipreuner.html">YACI-preneur</a></li>
                         </ul>
                     </li>
-                    <li class="dropdown">
-                        <a href="#donations">Donasi</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="donasi_quran.html">Donasi Rumah Qur'an</a></li>
-                            <li><a href="donasi_sembako.html">Donasi Sembako Yatim, Duafa, Dan bantuan Sosial</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#contact">Tahfidz</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#wakaf-tanah">Rumah Qur'an</a></li>
-                            <li><a href="#wakaf-sumur">Pengabdian Sekolah</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#activities">Kegiatan</a></li>
-                    <li><a href="#articles">Artikel</a></li>
-                    <li><a href="register.html" class="tbl-daftar">Register</a></li>
+                    <li><a href="donasi.html">Donasi</a></li>
+                    <li><a href="kegiatan.html">Kegiatan</a></li>
                     <li><a href="login.html" class="tbl-biru">Login</a></li>
                 </ul>
             </div>
@@ -46,49 +30,22 @@
     </nav>
     
     <div class="wrapper">
-        <!-- untuk home -->
-        <section id="home" class="fade-in">
-            <img src="assets/img/donasi.png" class="bg1 img-animate" alt="Background Image"/>
-            <div class="kolom img-animate">
-                <h2>Donasi Sembako Yatim, Dhuafa, Dan Bantuan Sosial</h2>
-                <p>Yayasan Anak Ceria Indonesia juga mengadakan Pengajian mingguan sekaligus pembagian sembako untuk Yatim dan Dhuafa, serta melakukan kegiatan sosial di masyarakat.
-                    Oleh karena itu, kami membutuhkan bantuan Bapak dan Ibu donatur baik berupa uang maupun berupa barang/bahan makanan, donatur dapat menghubungi kami langsung di 0818 0600 2906 (Deasy)</p>
-                <p><a href="#donationModal" class="tbl-pink" onclick="openModalSembako()">Donasi Sekarang</a></p>
-            </div>
-        </section>
-
-       <!-- Modal Donasi -->
-       <div id="donationModal" class="modal-sembako">
-        <div class="modal-content-sembako">
-            <span class="close-sembako" onclick="closeModalSembako()">&times;</span>
-            <h2>Form Donasi</h2>
-            <form action="submit_donation.php" method="post" enctype="multipart/form-data">
-                <div class="form-group">
-                    <label for="name">Nama:</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="bank">Nama Bank:</label>
-                    <input type="text" id="bank" name="bank" required>
-                </div>
-                <div class="form-group">
-                    <label for="transferProof">Upload Bukti Transfer:</label>
-                    <input type="file" id="transferProof" name="transferProof" accept="image/*" required>
-                </div>
-                <div class="form-group">
-                    <input type="submit" value="Submit">
-                </div>
-            </form>
-        </div>
-    </div>
-
-       
-
+        
         <section id="articles" class="fade-in img-animate">
             <div class="tengah">
                 <div class="kolom">
-                    <h2>Update Kegiatan Donasi</h2>
+                    <h2>Kegiatan Yayasan Anak Ceria Indonesia</h2>
                 </div>
+
+                <div class="kategori-buttons">
+                    <button class="kategori-btn" onclick="filterArticles('all')">Semua</button>
+                    <button class="kategori-btn" onclick="filterArticles('donasi')">Donasi</button>
+                    <button class="kategori-btn" onclick="filterArticles('tahfidz')">Tahfidz</button>
+                    <button class="kategori-btn" onclick="filterArticles('usaha')">Usaha Anak Yatim</button>
+                </div>
+
+                <hr>
+                <br>
         
                 <div class="article-list">
                     <div class="kartu-article">
@@ -116,6 +73,7 @@
             </div>
         </section>
 
+        
 
     </div>
 

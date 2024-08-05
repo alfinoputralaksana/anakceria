@@ -16,30 +16,14 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="profile.html">Profile</a></li>
                     <li class="dropdown">
-                        <a href="#programs">Program</a>
+                        <a>Program</a>
                         <ul class="dropdown-menu">
                             <li><a href="programbelajar.html">Program Belajar</a></li>
                             <li><a href="program_asuh.html">Program Orang Tua Asuh</a></li>
-                            <li><a href="yacipreuner.html">YACI-preneur</a></li>
                         </ul>
                     </li>
-                    <li class="dropdown">
-                        <a href="#donations">Donasi</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="donasi_quran.html">Donasi Rumah Qur'an</a></li>
-                            <li><a href="donasi_sembako.html">Donasi Sembako Yatim, Duafa, Dan bantuan Sosial</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#contact">Tahfidz</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#wakaf-tanah">Rumah Qur'an</a></li>
-                            <li><a href="#wakaf-sumur">Pengabdian Sekolah</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#activities">Kegiatan</a></li>
-                    <li><a href="#articles">Artikel</a></li>
-                    <li><a href="register.html" class="tbl-daftar">Register</a></li>
+                    <li><a href="donasi.html">Donasi</a></li>
+                    <li><a href="kegiatan.html">Kegiatan</a></li>
                     <li><a href="login.html" class="tbl-biru">Login</a></li>
                 </ul>
             </div>
@@ -58,10 +42,12 @@
                     <label>Username</label>
                 </div>
                 <div class="input-group">
-                    <input type="password" required>
-                    <label>Password</label>
+                    <input type="password" id="password" required>
+                    <label for="password">Password</label>
+                    <button type="button" id="togglePassword" class="password-toggle">
+                        <img src="assets/img/eye-icon.png" alt="Show Password" id="eyeIcon">
+                    </button>
                 </div>
-                <p class="signup-text">Belum memiliki akun? <a href="register.html">Daftar di sini</a></p>
                 <button type="submit">Login</button>
             </form>
         </div>

@@ -67,6 +67,11 @@ nav ul li a:hover {
     transform: scale(1.1);
 }
 
+.active{
+    color: #0f07a7;
+    transform: scale(1.1);
+}
+
 /* Dropdown Styles */
 /* Dropdown Styles */
 .menu .dropdown {
@@ -149,12 +154,7 @@ section {
     animation: fadeIn 1s forwards;
 }
 
-.fotoowner{
-    width: 100%;
-    margin-right: 70px;
-    position: relative;
-    border-radius: 50%;
-}
+
 
 .bg1 {
     width: 50%;
@@ -547,6 +547,23 @@ button:hover {
     text-decoration: underline;
 }
 
+.password-toggle img {
+    width: 20px; /* Ukuran ikon, sesuaikan dengan kebutuhan */
+    height: auto;
+}
+
+.password-toggle {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+
 /* =========================================================== */
 
 /* ======================programbelajar========================== */
@@ -598,8 +615,8 @@ button:hover {
 
 /* =============================program_asuh============================ */
 
-.container {
-    max-width: 800px;
+.container-asuh {
+    max-width: 1000px;
     margin: 0 auto;
     background-color: #fff;
     padding: 20px;
@@ -636,104 +653,7 @@ h1 {
     color: #444;
 }
 
-.adopt-btn {
-    background-color: #28a745;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 5px;
-    font-size: 16px;
-}
 
-.adopt-btn:hover {
-    background-color: #218838;
-}
-
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.4);
-}
-
-.modal-content {
-    background-color: #fff;
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 300px;
-    border-radius: 8px;
-    text-align: center;
-}
-
-.close-btn {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.close-btn:hover {
-    color: #000;
-}
-
-.form-group {
-    margin-bottom: 15px;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-.form-group input,
-.form-group textarea {
-    width: 100%;
-    padding: 8px;
-    box-sizing: border-box;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-textarea {
-    resize: vertical;
-}
-
-.confirm-btn {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    margin-top: 10px;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-.confirm-btn:hover {
-    background-color: #0056b3;
-}
-
-.cancel-btn {
-    background-color: #dc3545;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    margin-top: 10px;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-.cancel-btn:hover {
-    background-color: #c82333;
-}
 
 
 /* ================================Donasi Sembako================================= */
@@ -787,7 +707,8 @@ textarea {
 }
 
 .form-group input[type="text"],
-.form-group input[type="file"] {
+.form-group input[type="file"],
+.form-group textarea {
     width: 100%;
     padding: 8px;
     box-sizing: border-box;
@@ -811,4 +732,610 @@ textarea {
 
 .form-group input[type="submit"]:hover {
     background-color: #45a049;
+}
+
+/* Donation Control Styles */
+.donation-control {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 200px;
+    margin-top: 5px;
+}
+
+.donation-control button {
+    background-color: #7699bf;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.donation-control button:hover {
+    background-color: #364f6b;
+}
+
+.donation-control input[type="text"] {
+    text-align: center;
+    font-size: 18px;
+    width: 100px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: #fafafa;
+    cursor: default;
+}
+
+/* ==============profile================================= */
+
+/* Mengatur tampilan judul di bawah foto */
+.foto-title {
+    font-size: 1.5rem;
+    color: #364f6b;
+    font-weight: bold;
+    width: 200%;
+    text-align: center;
+}
+
+.fotoowner{
+    width: 200%;
+    margin-right: 70px;
+    position: relative;
+    border-radius: 50%;
+}
+
+.deskripsifoto{
+    color: #566677;
+    width: 200%;
+    margin: auto 0;
+    margin-left: 65px;
+}
+
+.spannn{
+    margin-right: 15%;
+    margin-top: 2%;
+}
+
+#vision-mission-goals {
+    padding: 50px 0;
+    background-color: #fff;
+    text-align: center;
+}
+
+.section-header h2 {
+    font-family: 'Comic Sans MS';
+    font-weight: 800;
+    font-size: 45px;
+    margin-bottom: 20px;
+    color: #364f6b;
+    width: 100%;
+    line-height: 50px;
+    animation: fadeInDown 1s ease-in-out;
+}
+
+.container {
+    width: 100%; /* Perlebar keseluruhan section */
+    max-width: 1200px; /* Batasi lebar maksimal */
+    margin: 0 auto;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 40px;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+.item {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%; /* Perlebar elemen item */
+    margin: 0 auto;  /* Tengah-tengahkan elemen item */
+}
+
+.item h3 {
+    font-size: 1.8rem;
+    color: #364f6b;
+    margin-bottom: 10px;
+}
+
+.item ul {
+    text-align: left;
+    margin-left: 20px;
+    color: #666;
+}
+
+.item ul li {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    list-style-type: disc;
+}
+
+.item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (min-width: 768px) {
+    .content {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    .item {
+        width: 45%;
+    }
+}
+
+
+#points-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 0;
+    background-color: #f9f9f9;
+  }
+  
+  .point {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    width: 80%;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  
+  .point:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+  
+  .image-container {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+  }
+  
+  .text-container {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .text-container h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+  }
+  
+  .text-container p {
+    font-size: 1.2em;
+    color: #555;
+  }
+  
+  .point:hover .image-container img {
+    transform: scale(1.05);
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  #points-section .point {
+    animation: fadeInUp 0.6s ease forwards;
+  }
+  
+  #points-section .point:nth-child(1) {
+    animation-delay: 0.2s;
+  }
+  
+  #points-section .point:nth-child(2) {
+    animation-delay: 0.4s;
+  }
+  
+  #points-section .point:nth-child(3) {
+    animation-delay: 0.6s;
+  }
+
+
+
+  /* ======================histori========================== */
+
+  .history-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    font-size: 2.5em;
+}
+
+.history-section {
+    margin-top: 30px;
+}
+
+.history-section h2 {
+    font-size: 1.8em;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.history-item {
+    display: flex;
+    align-items: center;
+    background-color: #f9f9f9;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.history-item:hover {
+    transform: scale(1.02);
+}
+
+.history-icon {
+    font-size: 2em;
+    margin-right: 20px;
+    color: #4CAF50;
+}
+
+.history-details h3 {
+    margin: 0 0 5px 0;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.history-details p {
+    margin: 0;
+    color: #777;
+}
+
+/* Styling untuk modals */
+.modal-histori {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content-histori {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 8px;
+}
+
+.close-histori {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-histori:hover,
+.close-histori:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+.navbar-container {
+    margin-left: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.user-name {
+    color: #364f6b;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    margin-right: 10px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.profile-photo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.dropdown {
+    padding: auto;
+    position: relative;
+}
+
+.dropdown-trigger {
+    display: flex;
+    padding: auto;
+    align-items: center;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropdown-trigger {
+    cursor: pointer;
+}
+
+
+/* ===========================pengaturan_akun=============== */
+
+.container-akun {
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    padding: 20px;
+    animation: fadeIn 1s ease-out;
+}
+.container-akun h1 {
+    margin-top: 0;
+    font-size: 24px;
+    color: #333;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+}
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+.form-group input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+.form-group input::placeholder {
+    color: #aaa;
+}
+.btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+.btn:active {
+    background-color: #004494;
+    transform: scale(1);
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ==========================Detail Berita====================== */
+
+.news-detail {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.news-title {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.news-meta {
+    color: #888;
+    font-size: 0.9em;
+    margin-bottom: 30px;
+    margin-top: 10px;
+    text-align: left;
+}
+
+.news-content p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.news-image {
+    width: 50%;
+    margin-bottom: 20px;
+}
+
+.recommendations {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 0.5s ease-in-out;
+}
+
+.recommendations h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.recommendation-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.recommendation-item img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.recommendation-item h3 {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.recommendation-item:hover {
+    transform: translateY(-5px);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =======================kegiatan======================== */
+
+.kategori-buttons {
+    margin-top: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.kategori-btn {
+    background-color: #2d74c0;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.kategori-btn:hover {
+    background-color: #3a4959;
 }
