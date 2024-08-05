@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - </title>
+    <link rel="stylesheet" href="/admin.css">
+</head>
+
+<body>
+    <div class="sidebar">
+        <img src="/assets/img/logo1.png" alt="logo">
+        <a class="active" href="/dashboard">Dashboard</a>
+        <a class="" href="/admin">Admin</a>
+        <a class="" href="/article">Artikel</a>
+        <a class="" href="/program/belajar">Program Belajar</a>
+        <a class="" href="/program/yaci-preneur">Program YACI Preneur</a>
+    </div>
+    <!-- Page content -->
+    <div class="content">
+        <div class="topnav" id="topNav">
+            <a href="/dashboard" class="active">Dashboard</a>
+            <div class="profile">
+                <button onclick="dropdown()" class="profile-button"> Nama </button>
+                <div class="dropdown-content" id="dropdown-profile">
+                    <a class="dropdown-item" href="/user/profile">Profil</a>
+                    <form style="margin: 0;" action="/logout" method="POST">
+                        <input type="hidden" name="_method" value="DELETE">
+                        <button style="margin: 0; width:100%; text-align:left;" type="submit">Logout</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <main>
+         <!-- Dashboard Stats Section -->
+    <div class="dashboard-stats">
+        <div class="stat-card" id="articles">
+            <img src="assets/img/user.png" alt="Artikel Icon" class="stat-icon">
+            <h3>Admin</h3>
+            <p class="stat-number">120</p>
+        </div>
+        <div class="stat-card" id="users">
+            <img src="assets/img/blog.png" alt="Pengguna Icon" class="stat-icon">
+            <h3>Artikel</h3>
+            <p class="stat-number">50</p>
+        </div>
+        <div class="stat-card" id="donations">
+            <img src="assets/img/donasi_icon.png" alt="Donasi Icon" class="stat-icon">
+            <h3>Donasi</h3>
+            <p class="stat-number">230</p>
+        </div>
+    </div>
+        </main>
+    </div>
+    <script>
+        function dropdown() {
+            document.getElementById("dropdown-profile").classList.toggle("show");
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function (event) {
+            if (!event.target.matches('.profile-button')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
